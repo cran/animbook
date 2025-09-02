@@ -60,15 +60,12 @@ wallaby_plot(dbl_categorized)
 # funnel web spider plot
 funnel_web_plot(dbl_categorized)
 
-## ----eval = FALSE-------------------------------------------------------------
-#  aeles_cat <- anim_prep_cat(data = aeles, id = id, values = party, time = year, group = gender)
-#  
-#  p <- wallaby_plot(aeles_cat)
-#  
-#  p2 <- anim_animate(p)
-#  
-#  gganimate::animate(p2)
+## ----eval = TRUE--------------------------------------------------------------
+aeles_cat <- anim_prep_cat(data = aeles, id = id, values = party, time = year, group = gender)
 
-## ----echo = FALSE-------------------------------------------------------------
-knitr::include_graphics("figures/example.gif")
+p <- wallaby_plot(aeles_cat)
+
+p2 <- anim_animate(p)
+
+gganimate::animate(p2)
 
